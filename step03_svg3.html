@@ -12,8 +12,12 @@
         }
         path {
             stroke: blueviolet;
-            stroke-width: 5;
+            stroke-width: 30;
             fill: none;
+            stroke-linecap: round; 
+            /*butt ㅣ square*/
+            stroke-linejoin: round;
+            /* miter ㅣ becel  */
 
         }
     </style>
@@ -26,8 +30,9 @@
             A B, C D, EF
             시작점, 조정점, 끝점
         -->
-            <path d="M 100 150 C 200 10, 300 50, 500 250"></path>
-            <path d="M 100 250 Q 300 150, 500 350"></path>
+           <!--<path d="M 100 150 C 200 10, 300 50, 500 250"></path>
+            <path d="M 100 250 Q 300 150, 500 350"></path> --> 
+            <path d="M 50 200 L 300 100 L 400 200" ></path>
     </svg>
 </body>
 </html>
