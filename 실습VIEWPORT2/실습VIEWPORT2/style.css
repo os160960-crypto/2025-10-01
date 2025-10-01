@@ -1,0 +1,174 @@
+/* CSS Reset */
+
+body,
+ul,
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+body {
+  background-color: #64727f;
+}
+
+/*
+	1. header 로고영역을 만들어주세요.
+	- 배경색 c9e5ff
+	- 로고 너비값 280px / 높이값 50px
+
+
+	2. gnb 영역을 만들어주세요.
+	- 배경색 505c66
+
+	3. a태그에 마우스오버 기능을 넣고 풍선이미지를 배치해주세요.
+
+	4. 컨텐츠 영역의 만들어주세요.
+	- 배경색 282e33
+	- h3 색상 77aaff
+
+	5. 아이콘 영역 가상상클래스에 background-image로 넣어주세요.
+
+	6. FOOTER영역을 만들어주세요.
+	배경색 282e33
+
+	7. 와이드 스크린에서 width 값이 1200을 넘지않게 해주세요.
+
+	8. 태블릿(1024px)에서 컨텐츠가 3개씩 나오게 해주세요.
+
+	9. 모바일(768px)에서 컨텐츠는 2개씩 로고와 gnb수정해주세요.
+
+	10. 500px보다 작아지면 컨텐츠 1개씩 나오게 해주세요.
+*/
+
+.wrapper {
+	padding: 0 30px;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header {
+	background-color: #c9e5ff;
+	/* overflow: hidden; */
+}
+
+.header .logo {
+	display: inline-block;
+	background-image: url('images/logo.png');
+	width: 280px;
+	height: 50px;
+	text-indent: -9999px;
+	margin: 20px 0;
+}
+
+.header .gnb {
+	background-color: #505c66;
+	display: flex;
+}
+
+.header .gnb li {
+
+}
+
+.header .gnb li a {
+	display: block;
+	color:white;
+	padding:0 20px;
+	height:50px;
+	line-height: 50px;
+}
+
+.header .gnb li a:hover {
+	background-color: rgba(0,0,0,0.3);
+}
+
+.header .point {
+	position: absolute;
+	right:-30px;
+	top:0;
+	z-index:10;
+}
+
+.contents {
+	background-color: #282e33;
+	margin-bottom: 50px;
+	padding:10px;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contents li {
+	width: 20%;
+	text-align: center;
+}
+.contents li .inner {
+	margin: 10px;
+	background-color: black;
+}
+
+.contents li img {
+	width: 100%;
+}
+
+.contents li .inner h3 {
+	color:#77aaff;
+	font-size:20px;
+	padding: 15px 0 0;
+}
+
+.contents li .inner p {
+	color:#999;
+	padding:20px;
+	font-size: 12px;
+}
+
+.contents li .inner p:after {
+	content: "";
+	display: block;
+	width: 152px;
+	height: 50px;
+	margin: 10px auto 0;
+	background-image: url('images/sprite-btn.png');
+}
+
+.footer {
+	background-color: #282e33;
+	padding: 40px 0;
+	color:#999;
+	border-top: 1px solid white;
+}
+
+@media (max-width:1024px) {
+	.contents li {
+		width: 33.3334%;
+	}
+}
+
+@media (max-width:768px) {
+	.contents li {
+		width: 50%;
+	}
+	.header {
+		text-align: center;
+	}
+	.header .point {
+		display: none;
+	}
+	.header .gnb li {
+		width: 20%;
+	}
+}
